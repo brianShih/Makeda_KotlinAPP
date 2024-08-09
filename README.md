@@ -1,1 +1,1 @@
-init for github README
+ My First Kotlin APP for Makeda APP demo
