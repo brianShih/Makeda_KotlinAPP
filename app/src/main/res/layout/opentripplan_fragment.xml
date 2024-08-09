@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="tw.breadcrumbs.makeda.TripPlanning.TripPlanning_Fragment"
+        android:id="@+id/opentripplan_layout">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/opentripplan_cons_layout">
+
+        <TextView
+                android:id="@+id/opentripplan_title"
+                app:layout_constraintTop_toTopOf="@id/opentripplan_cons_layout"
+                app:layout_constraintStart_toStartOf="@+id/opentripplan_cons_layout"
+                app:layout_constraintBottom_toTopOf="@+id/Otp_BackButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimary"
+                android:textAlignment="center"
+                android:text="@string/title_opentripplanFrag_zh"/>
+        <ImageButton
+                android:id="@+id/Otp_BackButton"
+                app:layout_constraintTop_toBottomOf="@+id/opentripplan_title"
+                app:layout_constraintStart_toStartOf="@+id/opentripplan_cons_layout"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back_icon"
+                android:foregroundGravity="left"
+                android:layout_gravity="start"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/dash_tripsched_zh"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/opentripplanRecyclerView"
+                app:layout_constraintTop_toBottomOf="@+id/Otp_BackButton"
+                app:layout_constraintStart_toStartOf="@+id/opentripplan_cons_layout"
+                app:layout_constraintEnd_toEndOf="@+id/opentripplan_cons_layout"
+                app:layout_constraintBottom_toBottomOf="@+id/opentripplan_cons_layout"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:clipToPadding="false"
+                android:layout_marginTop="10dp"
+                android:layout_height="0dp"
+                />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

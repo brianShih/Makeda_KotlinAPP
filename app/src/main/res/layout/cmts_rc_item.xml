@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_margin="8dp"
+        android:id="@+id/cmts_item_layout"
+        android:background="?android:attr/selectableItemBackground">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp">
+        <TextView
+                android:id="@+id/commenter"
+                android:layout_marginTop="2dp"
+                android:gravity="start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"/>
+        <EditText
+                android:id="@+id/comment_content"
+                android:hint="@string/pp_descrip_zh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:inputType="textMultiLine"
+                android:layout_gravity="center_horizontal"/>
+        <Button
+                android:id="@+id/cmt_update_btn"
+                android:layout_gravity="end"
+                android:background="@android:color/white"
+                android:text="@string/comment_update_zh"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

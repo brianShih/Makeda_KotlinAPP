@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:id="@+id/close_speedview_con"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:fitsSystemWindows="true"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageButton
+            android:id="@+id/speed_background"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/speed_background"
+            android:contentDescription="@string/dash_tracker_zh"
+            app:layout_constraintStart_toStartOf="@+id/close_speedview_con"
+            app:layout_constraintTop_toTopOf="@+id/close_speedview_con" />
+    <ImageButton
+            android:id="@+id/close_speedview"
+            app:layout_constraintStart_toStartOf="@+id/close_speedview_con"
+            app:layout_constraintTop_toTopOf="@+id/close_speedview_con"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/dash_tracker_zh"
+            android:src="@drawable/close_icon"
+            android:background="#00FFFFFF"/>
+</LinearLayout>

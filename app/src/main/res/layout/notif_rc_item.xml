@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- player_row.xml -->
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_margin="8dp"
+        android:id="@+id/notif_rc_layout"
+        android:background="?android:attr/selectableItemBackground">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="4dp">
+
+        <TextView
+                android:id="@+id/near_notif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="#00FFFFFF"
+                android:text="@string/notif_pp_distance_zh"
+                android:textSize="14sp" />
+        <TextView
+                android:id="@+id/head_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginStart="10dp"/>
+
+        <TextView
+                android:id="@+id/descriptionTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="14sp"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- player_row.xml -->
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_margin="8dp"
+        android:id="@+id/planning_pp_rc_item_layout"
+        android:background="?android:attr/selectableItemBackground">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp">
+        <TextView
+                android:id="@+id/pp_distance"
+                android:layout_marginTop="2dp"
+                android:gravity="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10sp" tools:ignore="SmallSp"/>
+        <TextView
+                android:id="@+id/pp_titleName"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:gravity="start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"/>
+        <TextView
+                android:id="@+id/pp_subTitle"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:gravity="start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:padding="4dp">
+        <ImageButton
+                android:id="@+id/pp_tripplan_del"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/dash_tripsched_zh"
+                android:src="@drawable/del_icon"
+                android:background="#00FFFFFF"/>
+
+        <ImageButton
+                android:id="@+id/pp_tripplan_call"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/dash_tripsched_zh"
+                android:src="@drawable/call_icon"
+                android:background="#00FFFFFF"/>
+
+        <ImageButton
+                android:id="@+id/pp_tripplan_nav"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/dash_tripsched_zh"
+                android:src="@drawable/nav_icon"
+                android:background="#00FFFFFF"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

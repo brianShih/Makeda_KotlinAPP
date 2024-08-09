@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_setting"
+        android:icon="@drawable/setting_icon"
+        android:title="@string/title_setting_zh" />
+
+    <item
+        android:id="@+id/navigation_add"
+        android:icon="@drawable/plus_icon"
+        android:title="@string/title_add_zh" />
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/dash_icon"
+        android:title="@string/title_dashboard_zh" />
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/message_icon"
+        android:title="@string/title_notifications_zh" />
+
+</menu>

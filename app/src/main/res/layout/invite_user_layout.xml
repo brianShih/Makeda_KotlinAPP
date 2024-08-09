@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/invite_user_layout">
+    <ImageButton
+            android:id="@+id/removeInviteUser"
+            app:layout_constraintEnd_toEndOf="@+id/invite_user_layout"
+            app:layout_constraintTop_toTopOf="@+id/invite_user_layout"
+            android:layout_marginEnd="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:src = "@drawable/del_icon" />
+    <LinearLayout
+            android:id="@+id/invite_first_layer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintStart_toStartOf="@+id/invite_user_layout"
+            app:layout_constraintTop_toBottomOf="@+id/removeInviteUser"
+            app:layout_constraintBottom_toTopOf="@+id/invite_second_layer"
+            android:orientation="horizontal">
+        <Button
+                android:id="@+id/planning_invite_option"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:drawableStart="@drawable/invite_icon" />
+        <TextView
+                android:id="@+id/invite_title"
+                android:layout_weight="8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:text="@string/trip_groupList_add_zh"/>
+    </LinearLayout>
+    <LinearLayout
+            android:id="@+id/invite_second_layer"
+            app:layout_constraintStart_toStartOf="@+id/invite_user_layout"
+            app:layout_constraintTop_toBottomOf="@+id/invite_first_layer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="start"
+            android:orientation="horizontal">
+        <EditText
+                android:id="@+id/invite_editeText"
+                android:layout_weight="9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="@string/trip_groupList_add_input_zh"
+                android:textSize="16sp"/>
+        <Button
+                android:id="@+id/invite_button"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:drawableStart="@drawable/ok_icon" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

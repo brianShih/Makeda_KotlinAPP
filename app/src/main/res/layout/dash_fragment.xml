@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+        tools:context="tw.breadcrumbs.makeda.Dash_Fragment"
+        android:id="@+id/dash_layout">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/frame_dash_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:id="@+id/dash_button_layer"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintStart_toStartOf="@+id/frame_dash_recycle"
+                app:layout_constraintTop_toTopOf="@+id/frame_dash_recycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:background="@color/colorPrimaryDark"
+                android:orientation="horizontal">
+
+            <ImageButton
+                    android:id="@+id/img_dwn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="#00FFFFFF"
+                    android:contentDescription="@string/dash_tracker_zh"
+                    android:src="@android:drawable/ic_menu_gallery" />
+
+            <ImageButton
+                    android:id="@+id/dash_tracker"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/dash_tracker_zh"
+                    android:src="@drawable/tracker_icon"
+                    android:background="#00FFFFFF"/>
+
+            <ImageButton
+                    android:id="@+id/dash_tripsch"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/dash_tripsched_zh"
+                    android:src="@drawable/triplist_icon"
+                    android:background="#00FFFFFF"/>
+
+            <ImageButton
+                    android:id="@+id/downloadPPsOnOff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
+                    android:contentDescription="@string/dash_tracker_zh"
+                    android:src="@drawable/online_icon"
+                    android:background="#00FFFFFF"/>
+            <ImageButton
+                    android:id="@+id/pp_filterButton"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/dash_tracker_zh"
+                    android:src="@drawable/filter_icon"
+                    android:background="#00FFFFFF"/>
+            <ImageButton
+                    android:id="@+id/search_button"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/dash_tracker_zh"
+                    android:src="@drawable/search_icon"
+                    android:background="#00FFFFFF" />
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/dash_spin_layer"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintStart_toStartOf="@+id/frame_dash_recycle"
+                app:layout_constraintTop_toBottomOf="@+id/dash_button_layer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal">
+                    <Spinner
+                            android:id="@+id/pp_country_dash"
+                            android:spinnerMode="dialog"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    <Spinner
+                            android:id="@+id/pp_city_dash"
+                            android:spinnerMode="dialog"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <GridView
+                android:id="@+id/quick_tag"
+                app:layout_constraintTop_toBottomOf="@+id/dash_spin_layer"
+                app:layout_constraintStart_toStartOf="@+id/frame_dash_recycle"
+                app:layout_constraintEnd_toEndOf="@+id/frame_dash_recycle"
+                app:layout_constraintBottom_toTopOf="@+id/PPListRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:verticalSpacing = "3dp"
+                android:horizontalSpacing = "3dp"
+                android:columnWidth="40pt"
+                android:gravity="center"
+                android:numColumns="auto_fit"
+                android:stretchMode="columnWidth" />
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/PPListRecyclerView"
+                app:layout_constraintTop_toBottomOf="@+id/quick_tag"
+                app:layout_constraintStart_toStartOf="@+id/frame_dash_recycle"
+                app:layout_constraintEnd_toEndOf="@+id/frame_dash_recycle"
+                app:layout_constraintBottom_toBottomOf="@+id/frame_dash_recycle"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:clipToPadding="false"
+                android:layout_height="0dp"
+                />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

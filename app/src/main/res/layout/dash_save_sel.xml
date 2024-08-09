@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <Button
+            android:id="@+id/dash_saveBook_group"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:drawableLeft="@drawable/book_icon"
+            android:drawableStart="@drawable/book_icon"
+            android:text="@string/dash_save_mode1"/>
+
+    <Button
+            android:id="@+id/dash_saveTripList_group"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
+            android:background="#00FFFFFF"
+            android:text="@string/dash_save_mode2"
+            android:drawableLeft="@drawable/triplist_icon"
+            android:drawableStart="@drawable/triplist_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+</LinearLayout>

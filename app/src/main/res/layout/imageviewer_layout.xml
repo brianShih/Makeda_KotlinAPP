@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageviewer_layout">
+    <Button
+            android:id="@+id/viewer_close_btn"
+            android:layout_width="10pt"
+            android:layout_height="10pt"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="@+id/imageviewer_layout"
+            app:layout_constraintTop_toTopOf="@+id/imageviewer_layout"
+            android:background="@android:drawable/ic_menu_close_clear_cancel" />
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/imageRecyclerView"
+            app:layout_constraintBottom_toBottomOf="@+id/imageviewer_layout"
+            app:layout_constraintEnd_toEndOf="@+id/imageviewer_layout"
+            app:layout_constraintStart_toStartOf="@+id/imageviewer_layout"
+            app:layout_constraintTop_toTopOf="@+id/imageviewer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            />
+</androidx.constraintlayout.widget.ConstraintLayout>

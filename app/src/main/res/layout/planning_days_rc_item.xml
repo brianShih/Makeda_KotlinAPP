@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- player_row.xml -->
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        app:cardCornerRadius="5dp"
+        android:id="@+id/planning_days_item_layout"
+        android:background="#00FFFFFF">
+        <LinearLayout
+                android:id="@+id/planning_days_ln"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+                <TextView
+                        android:id="@+id/dayTitle"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="20sp"/>
+                <ImageButton
+                        android:id="@+id/day_del"
+                        android:visibility="invisible"
+                        android:layout_gravity="end"
+                        android:src="@drawable/close_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#00FFFFFF"/>
+        </LinearLayout>
+</androidx.cardview.widget.CardView>

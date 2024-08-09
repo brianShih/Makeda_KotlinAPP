@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="tw.breadcrumbs.makeda.CommentsHandler.Comments_Fragment"
+             android:id="@+id/comments_layout">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/comments_cons_layout">
+        <ImageButton
+                android:id="@+id/comments_backButton"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintStart_toStartOf="@+id/comments_cons_layout"
+                app:layout_constraintTop_toTopOf="@+id/comments_cons_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back_icon"
+                android:foregroundGravity="left"
+                android:layout_gravity="start"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/cmts_backBtn_desp_zh"/>
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/commentsRecyclerView"
+                app:layout_constraintTop_toBottomOf="@+id/comments_backButton"
+                app:layout_constraintStart_toStartOf="@+id/comments_cons_layout"
+                app:layout_constraintEnd_toEndOf="@+id/comments_cons_layout"
+                app:layout_constraintBottom_toTopOf="@+id/cmt_add_layout"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:clipToPadding="false"
+                android:layout_marginTop="10dp"
+                android:layout_height="0dp"
+        />
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/cmt_add_layout"
+                      app:layout_constraintStart_toStartOf="@+id/comments_cons_layout"
+                      app:layout_constraintEnd_toEndOf="@+id/comments_cons_layout"
+                      app:layout_constraintBottom_toBottomOf="@+id/comments_cons_layout"
+                        android:background="@color/colorWhite"
+                      android:orientation="vertical">
+
+            <EditText
+                    android:id="@+id/comment_content"
+                    android:hint="@string/cmts_contentInput_zh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:inputType="textMultiLine"
+                    android:layout_gravity="center_horizontal"/>
+
+<!--
+            <ImageButton
+                    android:id="@+id/selectImgBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@android:drawable/ic_menu_add" />
+-->
+            <Button
+                    android:id="@+id/comment_add"
+                    android:textSize="14sp"
+                    android:text="@string/add_comment_zh"
+                    android:background="@color/colorPrimary"
+                    android:layout_gravity="end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

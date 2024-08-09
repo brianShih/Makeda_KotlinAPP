@@ -1,0 +1,40 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/locate_recently_layout"
+        tools:context="tw.breadcrumbs.makeda.LocRecently.LocateRecently_Fragment">
+    <ImageButton
+            android:id="@+id/backButton"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintStart_toStartOf="@+id/locate_recently_layout"
+            app:layout_constraintTop_toTopOf="@+id/locate_recently_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_icon"
+            android:layout_gravity="center_horizontal"
+            android:background="#00FFFFFF" />
+    <ProgressBar
+            android:id="@+id/locaterecently_rc_loading"
+            style="@android:style/Widget.Holo.ProgressBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/locate_recently_layout"
+            app:layout_constraintStart_toStartOf="@+id/locate_recently_layout"
+            app:layout_constraintTop_toBottomOf="@+id/backButton" />
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/locaterecentlyRC"
+            app:layout_constraintTop_toBottomOf="@+id/backButton"
+            app:layout_constraintStart_toStartOf="@+id/locate_recently_layout"
+            app:layout_constraintEnd_toEndOf="@+id/locate_recently_layout"
+            app:layout_constraintBottom_toBottomOf="@+id/locate_recently_layout"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:clipToPadding="false"
+            android:layout_height="0dp"
+            />
+</androidx.constraintlayout.widget.ConstraintLayout>

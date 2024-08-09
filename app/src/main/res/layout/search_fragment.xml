@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="tw.breadcrumbs.makeda.Search_Fragment"
+             android:id="@+id/search_layout">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/search_dash_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+        <ImageButton
+                android:id="@+id/searchBackButton"
+                app:layout_constraintStart_toStartOf="@+id/search_dash_recycle"
+                app:layout_constraintTop_toTopOf="@+id/search_dash_recycle"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back_icon"
+                android:layout_gravity="start"
+                android:background="#00FFFFFF" />
+
+        <LinearLayout
+                android:id="@+id/search_input_layer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/search_dash_recycle"
+                app:layout_constraintEnd_toEndOf="@+id/search_dash_recycle"
+                app:layout_constraintTop_toBottomOf="@+id/searchBackButton"
+                android:orientation="horizontal">
+            <EditText
+                    android:id="@+id/search_in"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="9"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:textSize="16sp"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"/>
+            <ImageButton
+                    android:id="@+id/searchActionButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/dash_tracker_zh"
+                    android:src="@drawable/search_icon"
+                    android:background="#00FFFFFF" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/searchRecyclerView"
+                app:layout_constraintStart_toStartOf="@+id/search_dash_recycle"
+                app:layout_constraintEnd_toEndOf="@+id/search_dash_recycle"
+                app:layout_constraintTop_toBottomOf="@+id/search_input_layer"
+                app:layout_constraintBottom_toBottomOf="@+id/search_dash_recycle"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:clipToPadding="false"
+                android:layout_height="0dp"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

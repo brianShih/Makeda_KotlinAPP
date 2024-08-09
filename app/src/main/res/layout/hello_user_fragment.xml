@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:id="@+id/hello_user_fragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/hello_user_con_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout android:id="@+id/hello_user_layer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                app:layout_constraintTop_toTopOf="@+id/hello_user_con_layout"
+                app:layout_constraintStart_toStartOf="@+id/hello_user_con_layout"
+                app:layout_constraintEnd_toEndOf="@+id/hello_user_con_layout"
+                app:layout_constraintBottom_toTopOf="@+id/hello_layout_L0"
+                android:orientation="vertical">
+            <TextView
+                    android:id="@+id/hello_verName"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity = "end"
+                    android:layout_gravity="center"
+                    android:text="@string/version_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/hello_user_con_layout"
+                app:layout_constraintEnd_toEndOf="@+id/hello_user_con_layout"
+                app:layout_constraintTop_toBottomOf="@+id/hello_user_layer1"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:orientation="vertical"
+                android:id="@+id/hello_layout_L0">
+            <TextView
+                    android:id="@+id/levelImg"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/level_bg"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/user_level_default"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            <ProgressBar
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:id="@+id/userexp_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:max="100"
+                    android:progress="0"
+                    android:secondaryProgress="0" />
+            <TextView
+                    android:id="@+id/userexp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginBottom="10dp"
+                    android:background="#00FFFFFF"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/user_exp_default"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/hello_layout_L00"
+                app:layout_constraintStart_toStartOf="@+id/hello_user_con_layout"
+                app:layout_constraintEnd_toEndOf="@+id/hello_user_con_layout"
+                app:layout_constraintTop_toBottomOf="@+id/hello_layout_L0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+            <TextView
+                    android:id="@+id/user_name_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="@string/hello_username_title_zh"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            <ImageView
+                    android:id="@+id/near_notif"
+                    android:layout_gravity="center"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="#00FFFFFF"
+                    android:src="@drawable/head_img" />
+
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/hello_user_con_layout"
+                app:layout_constraintEnd_toEndOf="@+id/hello_user_con_layout"
+                app:layout_constraintTop_toBottomOf="@+id/hello_layout_L00"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/hello_layout_L1"
+                android:orientation="horizontal">
+            <EditText
+                    android:id="@+id/user_name"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="8"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:autofillHints=""
+                    android:inputType="text" />
+            <Button
+                    android:id="@+id/user_name_change"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hello_change_btn_zh"
+                    android:textSize="14sp"/>
+
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/hello_user_con_layout"
+                app:layout_constraintEnd_toEndOf="@+id/hello_user_con_layout"
+                app:layout_constraintTop_toBottomOf="@+id/hello_layout_L1"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/hello_layout_L2"
+                android:orientation="horizontal">
+            <EditText
+                    android:id="@+id/user_phone_text"
+                    android:layout_width="0dp"
+                    android:layout_weight="8"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="16sp"
+                    android:autofillHints=""
+                    android:inputType="phone"/>
+            <Button
+                    android:id="@+id/user_phone_change"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hello_change_btn_zh"
+                    android:textSize="14sp"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/hello_user_con_layout"
+                app:layout_constraintEnd_toEndOf="@+id/hello_user_con_layout"
+                app:layout_constraintTop_toBottomOf="@+id/hello_layout_L2"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/hello_layout_L3"
+                android:orientation="horizontal">
+            <TextView
+                    android:id="@+id/user_email_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/hello_user_con_layout"
+                app:layout_constraintEnd_toEndOf="@+id/hello_user_con_layout"
+                app:layout_constraintTop_toBottomOf="@+id/hello_layout_L3"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/hello_layout_L4"
+                android:orientation="vertical">
+            <Button
+                    android:id="@+id/user_pass_change"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hello_userpass_btn_zh"
+                    android:textSize="14sp"/>
+            <Button
+                    android:id="@+id/user_logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:text="@string/user_logout_zh"
+                    android:background="@color/colorBackground"
+                    android:layout_gravity="center"/>
+            <Button
+                    android:id="@+id/hello_privacy_policy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="12sp"
+                    android:layout_marginTop="5dp"
+                    android:gravity = "end"
+                    android:background="@color/colorBackground"
+                    android:text="@string/privacy_policy"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
